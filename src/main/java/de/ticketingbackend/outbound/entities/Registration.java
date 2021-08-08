@@ -3,6 +3,8 @@ package de.ticketingbackend.outbound.entities;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.sql.Date;
@@ -11,6 +13,7 @@ import java.sql.Date;
 @Setter
 @Getter
 @NoArgsConstructor
+@Table(name = "")
 public class Registration {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
@@ -28,8 +31,10 @@ public class Registration {
     private Boolean alreadyPayed;
 
     @Column(insertable = false)
-    private Date updatedAt = new Date(System.currentTimeMillis());
+    @UpdateTimestamp
+    private Date updatedAt;
 
     @Column(insertable = false, updatable = false)
-    private Date createdAt = new Date(System.currentTimeMillis());
+    @CreationTimestamp
+    private Date createdAt;
 }
