@@ -14,7 +14,7 @@ import java.sql.Date;
 @Getter
 @NoArgsConstructor
 @Table(name = "")
-public class Registration {
+public class RegistrationEntity {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;

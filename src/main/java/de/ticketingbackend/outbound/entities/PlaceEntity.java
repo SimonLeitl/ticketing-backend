@@ -14,31 +14,21 @@ import java.sql.Date;
 @Getter
 @NoArgsConstructor
 @Table(name = "")
-public class Person {
+public class PlaceEntity {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
 
     @Column(nullable = false)
-    private String firstname;
+    private Integer number;
 
     @Column(nullable = false)
-    private String lastname;
+    private String location;
 
     @Column(nullable = false)
-    private String phoneNumber;
+    private Integer maxNumberOfPersons;
 
-    @Column(nullable = false)
-    private String street;
-
-    @Column(nullable = false)
-    private String houseNumber;
-
-    @Column(nullable = false)
-    private String city;
-
-    @Column(nullable = false)
-    private String postcode;
+    private String description;
 
     @Column(insertable = false)
     @UpdateTimestamp
