@@ -13,7 +13,7 @@ import java.sql.Date;
 @Setter
 @Getter
 @NoArgsConstructor
-@Table(name = "")
+@Table(name = "registration")
 public class RegistrationEntity {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
